@@ -10,3 +10,15 @@
 # TODO  десятичный логарифм числа a;
 # TODO  результат возведения числа a в степень b.
 # TODO Подсказка. Функцию log10 вы найдете в модуле math.
+from cmath import log10
+
+user_input_a = int(input('Укажите первое число:'))
+user_input_b = int(input('Укажите второе число:'))
+
+print(user_input_a + user_input_b)
+print(user_input_a - user_input_b)
+print(user_input_a * user_input_b)
+print(user_input_a / user_input_b)
+print(user_input_a % user_input_b)
+print(log10(user_input_a))
+print(user_input_a ** user_input_b)
