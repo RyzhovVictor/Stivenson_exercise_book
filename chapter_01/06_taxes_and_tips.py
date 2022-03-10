@@ -8,3 +8,21 @@
 #  На выходе программа должна отобразить отдельно налог, сумму чаевых и итог,
 # TODO включая обе составляющие. Форматируйте вывод таким образом, чтобы
 # TODO все числа отображались с двумя знаками после запятой.
+
+TAXES = 13
+TIPS = 18
+
+try:
+    cost_order = float(input('Введите сумму вашего заказа в рублях:'))
+except ValueError as ex:
+    print(f'Ошибка ввода: {ex}')
+print(f'Ваша сумма: {cost_order}')
+
+result_taxes = round(cost_order / 100 * TAXES, 2)
+print(f'Сумма налога: {result_taxes}')
+
+result_tips = round(cost_order / 100 * TIPS, 2)
+print(f'Сумма чаевых: {result_tips}')
+
+sum_amount = round(cost_order - (result_tips + result_taxes), 2)
+print(f'В итоге у вас осталось: {sum_amount}')
