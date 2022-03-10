@@ -6,3 +6,15 @@
 #  после чего рассчитывает и выводит на экран сумму
 # TODO на счету в конце первого, второго и третьего годов. Все суммы должны
 # TODO быть округлены до двух знаков после запятой.
+
+bet = 0.04
+
+sum_deposit = float(input('Какую сумму первоначального депозита вы внесли ?'))
+
+first_year = round(sum_deposit + sum_deposit * bet, 2)
+second_year = round(sum_deposit + sum_deposit * (bet * 2), 2)
+third_year = round(sum_deposit + sum_deposit * (bet * 3), 2)
+
+print(
+    f'В конце первого года: {first_year} руб.\nВ конце второго года: {second_year} руб.\n'
+    f'В конце третьего года: {third_year} руб.')
